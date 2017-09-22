@@ -4,23 +4,26 @@
 
 html, body {
 	height: 100%;
+	width: 100%
 	margin: 0;
 	padding: 0;
+	overflow-y:hidden;
+	letter-spacing: 1.7px;
 }
 
 body {
+	margin: 0;
 	color: #fff;
 	text-align: center;
 	font-family: 'Open Sans', sans-serif;
-	background-color: white;
+	background-color: #f4f4f4;
 }
 
 button {
-	border: 1px solid #696969;
+	border: 0.5px solid #a9a9a9;
 	float: right;
 	display: inline-block;
 	color: black;
-	background-color: white;
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -30,38 +33,42 @@ button {
 	width: 80px;
 	height: 30px;
 	margin-right: 15px;
+	margin-top: 15px;
 	background: url(../img/globe.png) 5px no-repeat;
+	background-color: #fafafa;
 	background-size: 20%;
 	padding-left: 20px;
-	background-color: white;
 }
 
 #top {
 	width: 100%;
 	text-align: center;
-	margin: 30px 0px 20px 0px;
+	margin: 20px 0px 20px 0px;
 }
 
-#top h1 {
-	color: #090909;
-	font-size: 20px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	padding: 0;
-	margin: 0;
-}
 
 #top img {
   display: block;
   margin: 0 auto;
-  width: 35%
+  width: 30%
 }
 
 
-#middle{
+#middle {
 	margin: 0;
+	padding: 0;
 	display: flex;
-	height: 75%;
+	height: 470px;
+	width: 100%
+}
+
+#middle article h1 {
+	font-family: 'Playfair Display', serif;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-size: 17px;
+	font-weight: normal;
+	color: #fafafa;
 }
 
 div {
@@ -93,27 +100,17 @@ div {
 	transform: scale(0.95);
 }
 
-
-#left h1 {
-	font-size: 17px;
-	letter-spacing: 1px;
-}
-
-#right h1 {
-	font-size: 17px;
-	letter-spacing: 1px;
-}
-
 .button {
+	font-family: 'Playfair Display', serif;
+	text-transform: uppercase;
+	font-weight: normal;
 	border-radius: 0px;
-	color: white;
+	color: #fafafa;
 	background-color: #f7b733;
 	padding: 7px;
 	margin: 20px;
 	text-align: center;
 	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: bold;
 	display: inline-block;
 	font-size: 14px;
 	cursor: pointer;
@@ -122,18 +119,16 @@ div {
 }
 
 .button:hover {
-	background: #fcc567;
+	background: #eea309;
 	color: #fff;
 }
 
 /*FOOTER*/
 footer {
-	margin-top: 0px;
-	margin-bottom: 0px;
-	height: 30px;
-	padding: 10px;
-	font-size: 80%;
+	height: 50px;
+	padding: 15px;
+	font-size: 12px;
 	text-align: center;
 	color: #090909;
-	background: white;
+	background: #f4f4f4;
 }

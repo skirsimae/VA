@@ -31,13 +31,14 @@ h1, h2, h3, h4 {
 
 p, li, form {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 16px;
+	font-size: 15px;
 	color: #596166;
 	line-height: 1.5;
 }
 
 header {
-  padding: 154px 0 100px;
+	padding: 154px 0 100px;
+	font-family: 'Open Sans', sans-serif;
 }
 
 section {
@@ -55,11 +56,28 @@ section h2 {
 }
 
 #mainNav li {
-	font-size: 13.5px;
+	font-size: 13px;
 }
 
 #mainNav img {
-	width: 60%
+	width: 60%;
+	text-align: center;
+}
+
+#main-page {
+	color: #f7b733; 
+	font-size: 13px;
+	text-decoration: none;
+	padding-right: 60px
+}
+
+#main-page:hover {
+	color: #eea309;
+}
+
+.navbar-dark .navbar-brand {
+    text-align: center;
+    width: 700px;
 }
 
 .navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
@@ -67,8 +85,8 @@ section h2 {
 }
 
 .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
-  color: #4abdac;
-  font-weight: 600;
+	color: #4abdac;
+	font-weight: 600;
 }
 
 .bg-dark {
@@ -80,11 +98,7 @@ section h2 {
 }
 
 .navbar-toggler-icon {
-background-color: #ddd;
-}
-
-.navbar-inner {
-	background:transparent !important;
+	background-color: #ddd;
 }
 
 /*................CONTAINER GENERAL.............................................*/
@@ -95,14 +109,20 @@ background-color: #ddd;
 }
 
 header {
-/*	background-image: url("../img/industrial.jpg") ;
-*/	opacity: 0.7;
-	background-color: #f4f4f4;
+	background-image: url("../img/background-img.jpeg");
+	background-size: cover;
+	background-repeat: no-repeat center;
+}
+
+header h1 {
+	color: #fafafa;
+	font-weight: normal;
+	letter-spacing: 1.7px;
 }
 
 /*................ABOUT THE COMPANY..............................................*/
 #firmast {
-	background-color: #dfdce3;
+	background-color: #fafafa;
 }
 
 .service-box {
@@ -137,8 +157,22 @@ header {
 }
 
 /*............................PRODUCTS...........................................*/
+.wrapper {
+	width: 100%;
+	text-align: center;
+}
+
+.wrapper ul {
+	display: inline-block;
+	text-align: left;
+}
+
+.wrapper li {
+    display: inline-block;
+}
+
 #seadmed {
-	background-color: #fafafa; 
+	background-color: #dfdce3; 
 }
 
 .fa-ul {
@@ -149,7 +183,7 @@ header {
 	padding-right: 10px;
 }
 
-/*Product sboxes*/
+/*Product boxes*/
 ::-moz-selection {
 	color: white;
 	background: #222222;
@@ -172,7 +206,6 @@ img::-moz-selection {
 	background: transparent; 
 }
 
-
 .portfolio-box {
 	position: relative;
 	display: block;
@@ -180,7 +213,7 @@ img::-moz-selection {
 	margin: 0 auto; 
 }
 
-  .portfolio-box .portfolio-box-caption {
+.portfolio-box .portfolio-box-caption {
 	position: absolute;
 	bottom: 0;
 	display: block;
@@ -237,8 +270,6 @@ img::-moz-selection {
 	} 
 }
 
-
-
 .no-gutter > [class*='col-'] {
   padding-right: 0;
   padding-left: 0; }
@@ -265,6 +296,7 @@ img::-moz-selection {
 }
 
 .img-cont img {
+	margin-left: 30px;
 	width: 240px;
 	height: 190px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -305,17 +337,22 @@ p, #soojusvahetid p, #pumbad p, #pesupead p, #vahustamisseadmed p, #vaiketootjad
 }
 
 #soojusvahetid #gea1 {
-	width: 210px;
-	height: 220px;
+	width: 200px;
+    height: 190px;
 }
 
 #soojusvahetid #gea2 {
-	width: 230px;
-	height: 220px;
+	width: 250px;
+	height: 190px;
 }
 
 
 /*pumbad modal*/
+#pumbad #pump1 {
+	width: 210px;
+	height: 190px;
+}
+
 #pumbad p {
 	line-height: 1.5;
 	margin-bottom: 5px;
@@ -470,21 +507,6 @@ p, #soojusvahetid p, #pumbad p, #pesupead p, #vahustamisseadmed p, #vaiketootjad
 	margin-bottom: 50px;
 }
 
-
-.wrapper {
-	width: 100%;
-	text-align: center;
-}
-
-.wrapper ul {
-	display: inline-block;
-	text-align: left;
-}
-
-.wrapper li {
-    display: inline-block;
-}
-
 /*........................KLIENDID....................................*/
 /*GET AN OFFER*/
 #pakkumine {
@@ -494,27 +516,28 @@ p, #soojusvahetid p, #pumbad p, #pesupead p, #vahustamisseadmed p, #vaiketootjad
 
 #form-div {
     background-color: rgba(72,72,72,0.4);
-    padding-left: 35px;
-    padding-right: 35px;
-    padding-top: 35px;
-    padding-bottom: 35px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 10px;
     width: 550px;
     float: left;
     left: 50%;
     position: relative;
+    border-radius: 4px;
     margin-top: 30px;
     margin-left: -270px;
-    -moz-border-radius: 0px;
-    -webkit-border-radius: 0px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
 }
 
 .input {
 	color: #2d3031;
 	font-family: Helvetica, Arial, sans-serif;
-	font-weight:500;
-	font-size: 16px;
+	font-weight: normal;
+	font-size: 14px;
 	border-radius: 0;
-	line-height: 22px;
+	line-height: 16px;
 	background-color: #fbfbfb;
 	padding: 10px 10px 10px 10px;
 	margin-bottom: 15px;
@@ -523,34 +546,32 @@ p, #soojusvahetid p, #pumbad p, #pesupead p, #vahustamisseadmed p, #vaiketootjad
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
-	border: 3px solid rgba(0,0,0,0);
+	border: 1px solid rgba(0,0,0,0);
 }
 
 .input:focus {
-	background: #fff;
+	background: #fafafa;
 	box-shadow: 0;
 	border: 1px solid #6b7071;
 	color: #2d3031;
 	outline: none;
-	padding: 10px 10px 10px 10px;
 }
 
 .focused {
 	color: #2d3031 !important;
-	border:#30aed6 solid 3px;
+	border:#30aed6 solid 1px;
 }
 
 textarea {
 	width: 100%;
-	height: 150px;
+	height: 120px;
 	line-height: 150%;
 	resize:vertical;
 }
 
-
 input:hover, textarea:hover,
 input:focus, textarea:focus {
-	background-color: white;
+	background-color: #fafafa;
 }
 
 #button-orange {
@@ -560,8 +581,8 @@ input:focus, textarea:focus {
 	border: #fbfbfb solid 1px;
 	cursor: pointer;
 	background-color: #fc4a1a;
-	color: white;
-	font-size: 17px;
+	color: #fafafa;
+	font-size: 16px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	-webkit-transition: all 0.3s;
@@ -569,6 +590,7 @@ input:focus, textarea:focus {
 	transition: all 0.3s;
 	margin-top:-4px;
 	font-weight: 500;
+	border-radius: 4px;
 }
 
 #button-orange:hover {
@@ -596,29 +618,46 @@ input:focus, textarea:focus {
 /*....................CONTACT INFORMATION.................................*/
 #kontakt {
   background-color: #078898;
-  padding-left: 200px;
-  padding-right: 200px
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
  
 #kontakt p {
-	font-family: 'Playfair Display', serif;
-	color: #2d3031;
+/*	font-family: 'Playfair Display', serif;
+*/	color: #2d3031;
 	font-size: 13px;
 	text-align: center;
-
+	font-weight: normal;
 }
 
+#kontakt .kontakt {
+	padding-top: 100px;
+}
+
+/*Google maps*/
+#kontakt #kaart {
+	margin-bottom: 30px;
+}
+
+#map {
+	height: 300px;
+	width: 350px;
+	border-radius: 4px;
+}
 
 /*FOOTER*/
 footer {
-	padding-top: 1rem!important;
-	padding-bottom: 1rem!important;
-	background-color: #fafafa;
-	font-size: 14px;
+	height: 50px;
+	padding: 15px;
+	font-size: 12px;
+	text-align: center;
+	background: #f4f4f4;
 }
 
 .text-white {
-	color: #078898!important;
+	color: #090909!important;
 }
 
 
