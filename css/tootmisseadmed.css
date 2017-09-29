@@ -83,7 +83,7 @@ section h2 {
 
 .navbar-dark .navbar-brand {
     text-align: center;
-    width: 700px;
+    width: 600px;
 }
 
 .navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
@@ -125,7 +125,7 @@ section h2 {
 }
 
 header {
-	background-image: url("../img/background-img.jpeg");
+	background-image: url("../img/background-img.jpg");
 	background-size: cover;
 	background-repeat: no-repeat center;
 }
@@ -133,12 +133,18 @@ header {
 header h1 {
 	color: #fafafa;
 	font-weight: normal;
-	letter-spacing: 1.7px;
+	letter-spacing: 2.5px;
+	font-size: 30px;
 }
 
 /*................ABOUT THE COMPANY..............................................*/
 #firmast {
 	background-color: #fafafa;
+}
+
+#knowledge_icon {
+	width: 65px;
+	padding-bottom: 2px;
 }
 
 .service-box {

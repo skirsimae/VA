@@ -19,11 +19,11 @@ body {
 	background-color: #f4f4f4;
 }
 
-button {
+.button_language_english {
 	border: 0.5px solid #a9a9a9;
 	float: right;
 	display: inline-block;
-	color: black;
+	color: #090909;
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -31,13 +31,37 @@ button {
 	cursor: pointer;
 	transition: all 0.3s;
 	width: 80px;
-	height: 30px;
+	height: 27px;
 	margin-right: 15px;
 	margin-top: 15px;
-	background: url(../img/globe.png) 5px no-repeat;
+	background: url(../img/pealeht/globe.png) 5px no-repeat;
 	background-color: #fafafa;
 	background-size: 20%;
 	padding-left: 20px;
+	padding-top: 10px;
+}
+
+.button_language_estonian {
+    border: 0.5px solid #a9a9a9;
+    float: right;
+    display: inline-block;
+    color: #090909;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 80px;
+    height: 27px;
+    margin-right: 15px;
+    margin-top: 15px;
+    background: url(../img/pealeht/globe.png) 5px no-repeat;
+    background-color: #fafafa;
+    background-size: 20%;
+    padding-left: 30px;
+    padding-right: 5px;
+    padding-top: 10px;
 }
 
 #top {
@@ -78,7 +102,7 @@ div {
 }
 
 #left {
-	background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(255, 255, 225, 0.10)), url(../img/accounting.jpg);
+	background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(255, 255, 225, 0.10)), url(../img/pealeht/accounting.jpg);
 	background-size: cover;
 	background-position: center;
 	flex: 1;
@@ -87,7 +111,7 @@ div {
 }
 
 #right {
-	background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(164, 222, 102, 0.10)), url(../img/sales1.jpg);
+	background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(164, 222, 102, 0.10)), url(../img/pealeht/sales1.jpg);
 	background-size: cover;
 	background-position: center;
 	flex: 1;
