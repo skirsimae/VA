@@ -56,7 +56,7 @@ section h2 {
 }
 
 #mainNav li {
-	font-size: 13px;
+	font-size: 14px;
 }
 
 #mainNav img {
@@ -137,6 +137,11 @@ header h1 {
 	font-size: 30px;
 }
 
+.lead {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
 /*................ABOUT THE COMPANY..............................................*/
 #firmast {
 	background-color: #fafafa;
@@ -163,7 +168,7 @@ header h1 {
 }
 
 .service-box h3 {
-	margin-top: 5px;
+	margin-top: 20px;
 }
 
 .fa-globe {
@@ -229,14 +234,20 @@ img::-moz-selection {
 	background: transparent; 
 }
 
+#portfolio .col {
+	padding: 0;
+}
+
 .portfolio-box {
 	position: relative;
+	text-align: center;
 	display: block;
 	max-width: 650px;
 	margin: 0 auto; 
+	padding: 20px 0px;
 }
 
-.portfolio-box .portfolio-box-caption {
+.portfolio-box-caption {
 	position: absolute;
 	bottom: 0;
 	display: block;
@@ -294,7 +305,7 @@ img::-moz-selection {
 	padding-bottom: 20px;
 }
 
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
+.portfolio-box-caption-content {
 	position: absolute;
 	top: 50%;
 	width: 100%;
@@ -302,19 +313,19 @@ img::-moz-selection {
 	text-align: center; 
 }
 
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+.project-category,
+.project-name {
 	padding: 0 15px;
 	font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif; 
 }
 
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+.project-category {
 	font-size: 14px;
 	font-weight: 600;
 	text-transform: uppercase; 
 }
 
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+.project-name {
 	font-size: 18px; 
 }
  
@@ -332,7 +343,7 @@ img::-moz-selection {
 	}
 
 	.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-	  font-size: 22px; 
+	  font-size: 18px; 
 	} 
 }
 
@@ -383,29 +394,29 @@ img::-moz-selection {
 	}
 }
 
-/*soojusvahetid modal*/
-#soojusvahetid h3 {
+/*soojusvahetajad modal*/
+#soojusvahetajad h3 {
 	text-transform: uppercase;
 	font-size: 16px;
 	margin-bottom: 15px;
 	margin-top: 30px;
 }
 
-#soojusvahetid p {
+#soojusvahetajad p {
 	line-height: 1.8;
 }
 
-#soojusvahetid img {
+#soojusvahetajad img {
 	padding: 10px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#soojusvahetid #gea1 {
+#soojusvahetajad #gea1 {
 	width: 200px;
     height: 190px;
 }
 
-#soojusvahetid #gea2 {
+#soojusvahetajad #gea2 {
 	width: 250px;
 	height: 190px;
 }
@@ -505,7 +516,7 @@ img::-moz-selection {
 
 @media only screen and (max-width: 992px) {
 
-	p, #soojusvahetid p, #pumbad p, #pesupead p, #vahustamisseadmed p, #vaiketootjad p, #homogenisaatorid p { 
+	p, #soojusvahetajad p, #pumbad p, #pesupead p, #vahustamisseadmed p, #vaiketootjad p, #homogenisaatorid p { 
 		font-size: 12px; 
 		line-height: 1.8
 	}
@@ -515,11 +526,11 @@ img::-moz-selection {
 		height: 120px;
 	}
 
-	#soojusvahetid h3, #pumbad h3, #pesupead h3, #vahustamisseadmed h3, #vaiketootjad h3, #homogenisaatorid h3 { 
+	#soojusvahetajad h3, #pumbad h3, #pesupead h3, #vahustamisseadmed h3, #vaiketootjad h3, #homogenisaatorid h3 { 
 		font-size: 15px; 
 	}
 
-	#soojusvahetid h4 {
+	#soojusvahetajad h4 {
 		font-size: 14px;
 		text-transform: uppercase;
 	}
@@ -548,13 +559,57 @@ img::-moz-selection {
 }
 
 /*.........................PARTNERS.............................*/
+
+.wrapper {
+	width: 100%;
+	text-align: center;
+}
+
+.wrapper ul {
+	display: inline-block;
+	text-align: left;
+}
+
+.wrapper li {
+    display: inline-block;
+}
+
+
 #partnerid {
 	background-color: #fafafa; 
 }
 
-#partnerid .container {
+#partnerid .col {
+	display: block;
+	width: 100%;
 	text-align: center;
-} 
+	margin-bottom: 50px;
+	float: left;
+/*	margin-right: 20px;
+	margin-left: 20px;*/
+}
+
+/*.col {
+	text-align: center;
+	width: 100%;
+}*/
+
+#partnerid .col p {
+	margin-left: 20px;
+    margin-right: auto;
+    width: 100%;
+}
+
+.img-col {
+	text-align: center;
+}
+
+#partnerid .partnerid-info {
+	margin-top: 20px;
+	margin-bottom: 50px;
+	text-align: left;
+}
+
 
 #partnerid img {
 	width: 160px;
@@ -594,17 +649,6 @@ img::-moz-selection {
 #partnerid #stelzer {
 	width: 150px;
 	height: 60px 
-}
-
-#partnerid .partnerid-info {
-	margin-top: 20px;
-	margin-bottom: 50px;
-}
-
-#partnerid .col {
-	margin-bottom: 50px;
-	margin-right: 20px;
-	margin-left: 20px;
 }
 
 /*......................GET AN OFFER................................*/
