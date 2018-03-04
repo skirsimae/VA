@@ -4,21 +4,19 @@
 
 html, body {
 	height: 100%;
-	width: 100%
-	margin: 0;
-	padding: 0;
+	max-width: 100%;
 	overflow-y:hidden;
 	letter-spacing: 1.7px;
 }
 
 body {
-	margin: 0;
-	color: #fff;
+	color: #090909;
 	text-align: center;
 	font-family: 'Open Sans', sans-serif;
 	background-color: #f4f4f4;
 }
 
+.button_language_estonian,
 .button_language_english {
 	border: 0.5px solid #a9a9a9;
 	float: right;
@@ -31,38 +29,27 @@ body {
 	cursor: pointer;
 	transition: all 0.3s;
 	width: 80px;
-	height: 27px;
+	height: 25px;
 	margin-right: 15px;
 	margin-top: 15px;
 	background: url(../img/pealeht/globe.png) 5px no-repeat;
 	background-color: #fafafa;
-	background-size: 20%;
-	padding-left: 20px;
-	padding-top: 10px;
+	background-size: 15%;
+	line-height: 18px;
+	padding-top: 8px;
 }
 
-.button_language_estonian {
-    border: 0.5px solid #a9a9a9;
-    float: right;
-    display: inline-block;
-    color: #090909;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 10px;
-    cursor: pointer;
-    transition: all 0.3s;
-    width: 80px;
-    height: 27px;
-    margin-right: 15px;
-    margin-top: 15px;
-    background: url(../img/pealeht/globe.png) 5px no-repeat;
-    background-color: #fafafa;
-    background-size: 20%;
-    padding-left: 30px;
-    padding-right: 5px;
-    padding-top: 10px;
+
+.button_language_english {
+	padding-left: 15px;
 }
+
+
+.button_language_estonian {
+	padding-left: 20px;
+	padding-right: 5px;
+}
+
 
 #top {
 	width: 100%;
@@ -72,50 +59,50 @@ body {
 
 
 #top img {
-  display: block;
-  margin: 0 auto;
-  width: 30%
+	display: block;
+	margin: 0 auto;
+	width: 30%
 }
 
 
 #middle {
-	margin: 0;
-	padding: 0;
 	display: flex;
-	height: 470px;
-	width: 100%
+	height: 72%;
+	max-width: 100%; 
 }
 
-#middle article h1 {
+
+#middle h1 {
 	font-family: 'Playfair Display', serif;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	font-size: 17px;
 	font-weight: normal;
 	color: #fafafa;
-}
-
-div {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	padding-top: 100px;
 }
 
 #left {
 	background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(255, 255, 225, 0.10)), url(../img/pealeht/accounting.jpg);
-	background-size: cover;
-	background-position: center;
-	flex: 1;
-	padding: 1rem;
-	transition: all .2s ease-in-out;
 }
+
 
 #right {
 	background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(164, 222, 102, 0.10)), url(../img/pealeht/sales1.jpg);
+}
+
+
+#left,
+#right {
+	max-width: 100%;
+	padding: 120px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 50%;
+	align-items: center;
 	background-size: cover;
 	background-position: center;
-	flex: 1;
-	padding: 1rem;
 	transition: all .2s ease-in-out;
 }
 
@@ -124,19 +111,20 @@ div {
 	transform: scale(0.95);
 }
 
+a {
+	text-decoration: none;
+	font-size: 14px;
+	color: #fafafa;
+	font-weight: normal;
+}
+
 .button {
 	font-family: 'Playfair Display', serif;
 	text-transform: uppercase;
-	font-weight: normal;
-	border-radius: 0px;
-	color: #fafafa;
 	background-color: #f7b733;
 	padding: 7px;
-	margin: 20px;
 	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 14px;
+	margin-top: auto;
 	cursor: pointer;
 	transition: all 0.3s;
 	width: 150px;
@@ -151,8 +139,155 @@ div {
 footer {
 	height: 50px;
 	padding: 15px;
-	font-size: 12px;
+	font-size: 15px;
 	text-align: center;
 	color: #090909;
 	background: #f4f4f4;
+}
+
+
+/*MOBIILI VERSIOON*/
+@media screen and (max-width: 1024px) {
+	.button_language_estonian,
+	.button_language_english {
+		line-height: 15px;
+		font-size: 10px;
+		width: 100px;
+		height: 25px;
+		margin-right: 5px;
+		margin-top: 0.5%;
+		background-size: 15%;
+	}
+
+	#top img {
+		width: 100%
+	}
+
+	#middle {
+		flex-direction: column;
+	}
+
+	#middle h1 {
+		letter-spacing: 3px;
+		font-size: 13px;
+		margin-top: 5%;
+	}
+
+	#left, #right {
+		width: auto;
+	}
+
+	.button {
+		padding: 7px;
+		margin-bottom: 20px;
+		font-size: 10px;
+		width: 100px;
+	}
+
+	footer {
+		height: auto;
+		padding: 20px;
+		margin-bottom: 10px;
+		font-size: 10px;
+		text-align: center;
+		color: #090909;
+		background: #f4f4f4;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.button_language_estonian,
+	.button_language_english {
+		line-height: 5px;
+		font-size: 5px;
+		width: 50px;
+		height: 12px;
+		margin-right: 5px;
+		margin-top: 15px;
+		background-size: 15%
+	}
+
+	#top img {
+		width: 100%
+	}
+
+	#middle {
+		flex-direction: column;
+	}
+
+	#middle h1 {
+		letter-spacing: 3px;
+		font-size: 18px;
+		margin-top: 8%;
+}
+
+	#left, #right {
+		width: auto;
+	}
+	
+	.button {
+		padding: 7px;
+		margin-bottom: 20px;
+		font-size: 10px;
+		width: 100px;
+	}
+
+	footer {
+		height: auto;
+		padding: 20px;
+		margin-bottom: 10px;
+		font-size: 10px;
+		text-align: center;
+		color: #090909;
+		background: #f4f4f4;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.button_language_estonian,
+	.button_language_english {
+		line-height: 5px;
+		font-size: 5px;
+		width: 50px;
+		height: 12px;
+		margin-right: 5px;
+		margin-top: 15px;
+		background-size: 15%;
+	} 
+
+	#top img {
+		margin-top: 5px;
+		width: 100%;
+	}
+
+	#middle {
+		flex-direction: column;
+		height: auto;
+	}
+
+	#middle h1 {
+		padding-top: 8%;
+		letter-spacing: 3px;
+		font-size: 13px;
+	}
+
+	#left, #right {
+		width: auto;
+		padding: 0px;
+	}
+
+	.button {
+		padding: 7px;
+		margin-bottom: 40px;
+		font-size: 10px;
+		width: 100px;
+	}
+
+	footer {
+		padding: 2px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		font-size: 6px;
+		text-align: center;
+	}
 }

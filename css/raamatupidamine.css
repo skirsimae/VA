@@ -1,0 +1,243 @@
+/*....................................GENERAL...............................................*/
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	letter-spacing: 1.5px;
+	line-height: 200%;
+}
+
+hr {
+	max-width: 50px;
+	border-width: 3px;
+	border-color: #4d2c3d;
+}
+
+h1 {
+	font-size: 22px;
+}
+
+h1, h2  {
+	font-family: 'Playfair Display', serif;
+	color: #313639;
+}
+
+p, li, form {
+	font-family: 'Signika', sans-serif;
+	font-size: 17px;
+	color: #090909;
+	line-height: 1.8;
+}
+
+section {
+	padding: 50px 0;
+}
+
+section h2 {
+	margin-bottom: 30px;
+}
+
+section h3 {
+	color: #090909;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+section#teenused {
+	padding-top: 100px;
+}
+
+.container h2 {
+	text-transform: uppercase;
+	font-size: 18px;
+	color: #155765;
+	font-weight: bolder;
+}
+
+/*...............................NAVIGATION.........................................*/
+#mainNav {
+	text-transform: uppercase;
+}
+
+#mainNav li {
+	font-size: 14px;
+	font-family: 'Open Sans', serif;
+	letter-spacing: 0.5px;
+}
+
+#mainNav img {
+	width: 60%;
+	text-align: center;
+	position: relative;
+}
+
+@media (min-width: 356px) {
+	#mainNav img {
+		width: 80%;
+		position: relative;
+		left: 230px;
+	}
+}
+
+#main-page {
+	color: #155765; 
+	font-size: 13px;
+	text-decoration: none;
+	padding-right: 60px;
+	font-weight: bold;
+}
+
+#main-page:hover {
+	color: #eea309;
+}
+
+.navbar-dark .navbar-brand {
+	text-align: center;
+	width: 600px;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+   color: #155765;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+	color: #155765;
+	font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+	.nav-link {
+		font-size: 80%;
+	}
+
+	.navbar-dark .navbar-brand {
+		width: 500px;
+	}
+}
+
+.bg-dark {
+	background-color: #fafafa!important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+	color: #155765;
+	font-weight: bold;
+}
+
+.navbar-toggler-icon {
+	background-color: #ddd;
+}
+
+
+/*.................TEENUSED.....................................................*/
+#teenused hr.primary {
+	margin-bottom: 40px;
+}
+
+.wrapper {
+	width: 100%;
+	text-align: left;
+}
+
+.wrapper ul {
+	display: inline-block;
+	text-align: left;
+}
+
+.wrapper li {
+	display: inline-block;
+}
+
+.fa-ul {
+}
+
+.fa-check {
+	color: #4d2c3d;
+	padding-right: 10px;
+}
+
+
+/*.............................ANKEET.....................................*/
+form#reused_form {
+	padding-top: 30px;
+	padding-bottom: 10px;
+	width: auto;
+	float: left;
+	left: 50%;
+	position: relative;
+	margin-top: 30px;
+	margin-left: -270px;
+}
+
+input, textarea {
+	font-size: 13px !important;
+}
+
+select.form-control {
+	font-size: 13px
+}
+
+.form-check-input {
+	margin-left: 0rem;
+}
+
+button {
+	width: 100%;
+	border: #4d2c3d solid 1px;
+	cursor: pointer;
+	background-color: #4d2c3d;
+	color: #fafafa;
+	font-size: 14px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	margin-top:-4px;
+	border-radius: 4px;
+}
+
+
+/*...............................KONTAKT.................................*/
+#kontakt {
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 50px;
+	padding-bottom: 100px;
+}
+
+#kontakt-header {
+	margin-top: 30px;
+	margin-bottom: 50px;
+	color: #090909;
+}
+
+/*..............................FOOTER.....................................*/
+footer {
+	height: 50px;
+	padding: 15px;
+	text-align: center;
+	background: #f4f4f4;
+}
+
+footer p {
+	font-size: 15px;
+	color: #090909;
+}
+
+.text-white {
+	color: #090909!important;
+}
+
+
+#background {
+	background-color: #fafafa;
+	margin: 0px 150px;
+	padding: 0px 50px;
+}
+
+body {
+	background-color: #57652A;
+}

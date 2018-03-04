@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Raamatupidamisteenus.">
+	<meta name="author" content="Silva Kirsimae">
+	<title>Viljandi Ärikeskus</title>
+
+	<!-- Font-awesome -->
+	<link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+
+	<!-- Bootstrap core css -->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
+
+	<!-- Main css for this page -->
+	<link href="css/raamatupidamine.css" rel="stylesheet">
+</head>
+<body>
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+		<div class="container">
+			<a id="main-page" href="index.html" i class="fa fa-arrow-left" aria-hidden="true">&nbspPealeht</a>
+			<a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="img/logo.jpg"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link js-scroll-trigger" href="#teenused">Teenused</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link js-scroll-trigger" href="#pakkumine">Küsi pakkumist</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link js-scroll-trigger" href="#kontakt">Kontakt</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+<div id="background">
+	<!-- Teenused -->
+	<section id="teenused">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2>Teenused</h2>
+					<hr class="primary">
+				</div>
+				<div class="row"></div>
+					<p style="text-align: left">
+						OÜ Viljandi Ärikeskus on asutatud 2006. aastal ja pakub finantsteenuseid alates firmade asutamisest, äriplaanide koostamisest kuni firmade likvideerimiseni. <br><br>Meie eesmärgiks on pakkuda oma klientidele kvaliteetset ja terviklikku raamatupidamisteenust. <br><br>Oma sihtgrupina näeme eelkõige väikese ja keskmise suurusega ettevõtteid ja FIE-sid üle Eesti, kellel on ennekõike mõistlikum sisse osta raamatupidamisteenust kui palgata eraldi raamatupidaja. <br><br>Lühikesele tegutsemisajale vaatamata on meie klientide arv pidevalt suurenenud ja paljud uued kliendid on meid leidnud vanade klientide soovitustel, mis annab märku meie teenuse kvaliteedist ja sõbralikust koostööst. <br><br>Meie klientide tegevusalad on nii eestisisene kui rahvusvaheline kaubandus (sh ka e-poed), erinevate teenuste osutamine (näiteks transpordi-, projektijuhtimise- kui ka maastikuhooldusteenused), aga ka kinnisvara arendus ja vahendus ning tootmine. <br><br>Raamatupidamisteenust on võimalik organiseerida ka üle interneti. See sobib eriti jae- ja hulgikauplustele kui on jooksvalt vaja koostada müügiarveid. Ülejäänud toimingud saame korraldada üle võrgu. Nii on ka kliendil võimalik igal ajahetkel saada infot oma ettevõtte majandustegevuse kohta. Sellise lahendusega ei ole tähtis millises Eestimaa linnas klient ise asub. Meie kliendid asuvad Viljandis, Tallinnas, Pärnus ja ka Valgamaal.
+					</p>
+
+					<p style="text-align: left"><b>1. Raamatupidamisteenuse tasu</b> arvestamisel lepitakse kokku igakuine hind ühtse summana. Käibemaksukohustuslase raamatupidamisteenuse minimaalne ühe kuu tasu on 65 EUR + KM. Vastavalt töö mahu, spetsiifika või elukalliduse koefitsendi muutumisele korrigeeritakse teenustasu, leppides selles eelnevalt kokku. Nii ei tule kliendil kunagi üllatust ega tavapärasest suuremat arvet. <br><br>Minimaalne tasu sisaldab:</p>
+					<div class="wrapper">
+						<ul class="fa-ul">
+							<li><i class="fa fa-check" aria-hidden="true"></i>ostu- ja müügiarveid kokku kuni 20 tk;</li> <br>
+							<li><i class="fa fa-check" aria-hidden="true"></i>pangaväljavõte kuni 1 lk;</li><br>
+							<li><i class="fa fa-check" aria-hidden="true"></i>ostuarvete ja maksude ülekanded ettevõtte arvelduskontolt,</li><br>
+							<li><i class="fa fa-check" aria-hidden="true"></i>töötasu arvestused kuni 3 in (sh juhatuse liikmed või palgatöölised);</li><br>	
+							<li><i class="fa fa-check" aria-hidden="true"></i>komandeeringute aruandes kuni 3 in;</li><br>
+							<li><i class="fa fa-check" aria-hidden="true"></i>majanduskulude aruanded kuni 3 in;</li><br>
+							<li><i class="fa fa-check" aria-hidden="true"></i>põhivara arvestus kuni 3 objekti;</li><br>
+							<li><i class="fa fa-check" aria-hidden="true"></i>maksu-ja tolliametile deklaratsioonide esitamine (KMD ja TSD);</li><br>
+							<li><i class="fa fa-check" aria-hidden="true"></i>laoarvestus kuni 10 artiklit;</li><br>		
+						</ul>
+					</div>
+					<p style="text-align: left">Kui firma käive ei ületa 16 000 eurot, on võimalik teenuse osutamine nii igakuise tööna, kui ühekordse tellimustööna (juhul kui pole ka väljamakseid, mida on vaja deklareerida tähtaegselt).</p>
+
+					<p style="text-align: left"><b>2. Palga- ja personaliarvestuse teenus.</b>Igakuise teenusena osutame ka eraldi palga ja / või personaliarvestuse teenust. Koguteenuse hind alates 10 EUR+KM inimese kohta. Ainult palga- ja puhkusearvestuse ning deklaratsioonide esitamise teenus al 6,50 EUR+KM inimese kohta.<br><br>Hind sisaldab:</p>
+					<div class="wrapper">
+						<ul class="fa-ul">
+							<li><i class="fa fa-check" aria-hidden="true"></i>tööaja arvestust;</li> <br>
+							<li><i class="fa fa-check" aria-hidden="true"></i>palgaarvestust ja palgalehtede koostamist, soovi korral ka kulude arvestamist osakondade või kuluobjektide lõikes;</li><br>
+							<li><i class="fa fa-check" aria-hidden="true"></i>puhkusearvestust, sh ka puhkuste ajakava, käskkirju, teatisi;</li><br>
+							<li><i class="fa fa-check" aria-hidden="true"></i>igakuiselt deklaratsiooni esitamist Maksu- ja Tolliametile;</li><br>	
+							<li><i class="fa fa-check" aria-hidden="true"></i>töövõimetuslehtede täitmist ja esitamist Haigekassale;</li><br>
+							<li><i class="fa fa-check" aria-hidden="true"></i>töölepingute, juhatuse liikme lepingute koostamist ka lepingute muutmiste ja lõpetamiste ettevalmistamine, lõpparve arvutamist;</li><br>
+							<li><i class="fa fa-check" aria-hidden="true"></i>ametijuhendite, materiaalse vastutuse lepingute koostamine;</li><br>
+							<li><i class="fa fa-check" aria-hidden="true"></i>isikukaartide täitmine;</li><br>
+							<li><i class="fa fa-check" aria-hidden="true"></i>personalialaste dokumentide vormistamine;</li><br>
+							<li><i class="fa fa-check" aria-hidden="true"></i>töösisekorraeeskirjade koostamine (enam kui 5 töötajaga tööandjal kohustuslik);</li><br>		
+						</ul>
+					</div>
+					<p style="text-align: left"><b>Majandusaasta aruande</b> koosamise tasu arvestatakse aruandeperioodi 3 viimase kuu teenuse maksumuse keskmine, kuid mitte rohkem kui 100 EUR+KM. Majandusaasta aruannet on võimalik tellida ka ühekordse tööna.</p>
+					<p style="text-align: left"><b>Statistikaametile</b> esitatavad aruanded kuutasu hinna sees.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+<div id="background">
+	<!-- Pakkumine -->
+	<section id="pakkumine">
+		<div class="container">
+
+			<div class="row">
+				<div class="col text-center">
+					<h2>Küsi pakkumist</h2>
+					<hr class="primary">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+
+					<form method="post" id="reused_form">
+						<div class="form-group row">
+							<label for="name" class="col-4 col-form-label">Nimi:</label>
+							<div class="col-8">
+								<input type="text" class="form-control" id="name" name="name" required>
+							</div>
+						</div>
+
+						<div class="form-group row">
+							<label for="name" class="col-4 col-form-label">Ettevõtlusvorm:</label>
+							<div class="col-4">
+								<select name="ettevõtlusvorm" class="form-control">
+									<option value="oü">OÜ</option>
+									<option value="as">AS</option>
+									<option value="fie">FIE</option>
+									<option value="mtü">MTÜ või Selts</option>
+									<option value="uü">UÜ</option>
+									<option value="kü">KÜ</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="form-group row">
+							<label for="name" class="col-4 col-form-label">E-mail:</label>
+							<div class="col-8">
+								<input type="text" class="form-control" id="email" name="email" required>
+							</div>
+						</div>
+
+						<div class="form-group row">
+							<label for="name" class="col-4 col-form-label">Tegevusvaldkond:</label>
+							<div class="col-8">
+								<input type="text" class="form-control" id="tegevusvaldkond" name="tegevusvaldkond" required>
+							</div>
+						</div>
+
+						<div class="form-group row">
+							<label for="name" class="col-4 col-form-label">Töötajate arv:</label>
+							<div class="col-8">
+								<select name="töötajate_arv" class="form-control">
+									<option value="juhatuse_liige">ainult juhatuse liige (või liikmed)</option>
+									<option value="1">1 - 5 inimest</option>
+									<option value="6">6 - 10 inimest</option>
+									<option value="10">10 - 20 inimest</option>
+									<option value="20">üle 20 inimese</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="form-group row">
+							<label for="name" class="col-4 col-form-label">Käive aasatas:</label>
+							<div class="col-8"> 
+								<select name="käive_aastas" class="form-control">
+									<option value="16">kuni 16 tuhat eurot</option>
+									<option value="64">16 kuni 64 tuhat eurot</option>
+									<option value="128">64 kuni 128 tuhat eurot</option>
+									<option value="muu">üle 128 tuhande euro</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="form-group row">
+							<label for="name" class="col-4 col-form-label">Käibemaksu-kohustuslane:</label>
+							<div class="col-4"> 
+								<select name="käibemaksukohustuslane" class="form-control">
+									<option value="jah">Jah</option>
+									<option value="ei">Ei</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="form-group row">
+							<label for="name" class="col-4 col-form-label">Ladu:</label>
+							<div class="col-4">
+								<select name="ladu" class="form-control">
+									<option value="jah">Jah</option>
+									<option value="ei">Ei</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="form-group row">
+							<label for="name" class="col-4 col-form-label">Kaardimakseterminal (kaupluses):</label>
+							<div class="col-4"> 
+								<select name="kaardimakseterminal" class="form-control">
+									<option value="jah">Jah</option>
+									<option value="ei">Ei</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="form-group row">
+							<label class="col-4 col-form-check-label">Tegevus välisriigis:</label>
+							<div class="col-4">
+								<input type="checkbox" class="form-check-input">
+							</div>
+						</div>
+
+						<div class="form-group row">
+							<label class="col-4 col-form-check-label">Tehingud valuutas:</label>
+							<div class="col-4">
+								<input type="checkbox" class="form-check-input">
+							</div>
+						</div>
+
+						<div class="form-group row">
+							<label for="lisainfo" class="col-4 col-form-label">Lisainfo:</label>
+							<div class="col-8">
+								<textarea class="form-control" type="textarea" name="comments" id="lisainfo" maxlength="6000" rows="7"></textarea>
+							</div>
+						</div>
+
+						<div class="form-group row">
+							<label for="name" class="col-4 col-form-label">Algdokumentide arv (ostu-müügiarved, pangatehingud):</label>
+							<div class="col-8">
+								<select name="algdokumentide_arv" class="form-control">
+									<option value="25">1 -25</option>
+									<option value="50">26 - 50</option>
+									<option value="75">51 - 75</option>
+									<option value="100">76 - 100</option>
+									<option value="muu">üle 100</option>
+								</select>
+							</div>
+						</div>
+						</br>
+						<div class="row">
+							<div class="col-12 form-group">
+								<button type="submit">SAADA</button>
+							</div>
+						</div>
+					</form>
+
+					<!-- Success message -->
+					<div  id="success_message" style="display:none">
+						<h3>Sõnum edukalt saadetud.</h3>
+						<p>Oleme Teie kirja kätte saanud.Täname, et tunnete huvi meie poolt pakutavate teenuste vastu.Võtame Teiega peagi ühendust.</p>
+					</div>
+
+					<!-- Error message -->
+					<div id="error_message"
+						style="width:100%; height:100%; display:none; ">
+						<h3>Error</h3>
+						<p>Vabandame, midagi läks valesti. Palun proovige uuesti.</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+
+<div id="background">
+<!-- Kontakt -->
+	<section id="kontakt">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<h2>Kontakt</h2>
+					<hr class="primary">
+				</div>
+			</div>
+
+			<div class="col text-center">
+				<h3 id="kontakt-header"><b>Raamatupidamise osakond</b></h3>
+			</div>
+			<div class="row justify-content-md-center">
+				<div class="col col-sm-4">
+					<p class="kontakt"><b>Ene Ojasuu</b><br>Pearaamatupidaja - Finantsjuht<br>Telefon:+372 52 04 083<br>E-mail: ene@viljandi-arikeskus.ee</p>
+				</div>
+				<div class="col col-sm-4">
+					<p class="kontakt"><b>Annika Kirsimäe</b><br>Raamatupidaja - Kliendihaldur<br>Telefon:+372 52 99 732<br>E-mail: annika@viljandi-arikeskus.ee</p>
+				</div>
+			</div>
+			<br>
+			<div class="row justify-content-md-center">
+				<div class="col col-sm-4"> 
+					<p class="kontakt"><b>Viljandi Ärikeskus OÜ</b><br>Lossi 22, Viljandi 710033<br>KMKRnr: EE101060949<br>Registrikood: 11230453<br></p>
+				</div>
+				<div class="col col-sm-4">
+					<p class="kontakt"><b>Pangaandmed:</b><br>SWEDBANK 221032860372<br>IBAN: EE692200221032860372<br>SWIFT CODE: HABAEE2X</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<p class="m-0 text-center text-white">Copyright 2018 &copy; OÜ Viljandi Ärikeskus | Aadress: Lossi 22, 71003 Viljandi | E-mail: info@viljandi-arikeskus.ee</p>
+		</div>
+		<!-- /.container -->
+	</footer>
+
+
+	<script>
+		function initMap() {
+			var arikeskus = {lat: 58.364429, lng: 25.600241};
+			var map = new google.maps.Map(document.getElementById('map'), {
+				zoom: 17,
+				center: arikeskus
+		});
+		var marker = new google.maps.Marker ({
+			position: arikeskus,
+			map: map
+			});
+		}
+	</script>
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/popper/popper.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Plugin JavaScript -->
+	<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+	<!-- Custom JavaScript for this theme -->
+	<script src="js/scrolling-nav.js"></script>
+
+	<!-- Pakkumise ankeet -->
+	<script src="raamatupidamine/form.js"></script>
+</body>
+</html>

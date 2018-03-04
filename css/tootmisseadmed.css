@@ -24,7 +24,7 @@ hr {
 }
 
 h1 {
-	font-size: 26px;
+	font-size: 22px;
 }
 
 h1, h2, h3, h4 {
@@ -34,7 +34,7 @@ h1, h2, h3, h4 {
 
 p, li, form {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 14px;
+	font-size: 13px;
 	color: #596166;
 	line-height: 1.8;
 }
@@ -77,8 +77,9 @@ section h2 {
 	}
 }
 #main-page {
-	color: #f7b733; 
+	color: #155765; 
 	font-size: 13px;
+	font-weight: bolder;
 	text-decoration: none;
 	padding-right: 60px
 }
@@ -93,11 +94,12 @@ section h2 {
 }
 
 .navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
-   color: #4abdac;
+   color: #155765;
+   font-weight: bolder;
 }
 
 .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
-	color: #4abdac;
+	color: #155765;
 	font-weight: 600;
 }
 
@@ -116,7 +118,8 @@ section h2 {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-	color: #4abdac;
+	color: #155765;
+	font-weight: bolder;
 }
 
 .navbar-toggler-icon {
@@ -129,12 +132,18 @@ section h2 {
 /*................CONTAINER GENERAL.............................................*/
 .container h2 {
 	text-transform: uppercase;
-	font-size: 22px;
-	color: #4abdac;
+	font-size: 18px;
+	color: #155765 !important;
+	font-weight: bolder;
+}
+
+.container h3 {
+	font-size: 20px;
 }
 
 header {
 	background-image: url("../img/background-img.jpg");
+	height: 280px;
 	background-size: cover;
 	background-repeat: no-repeat center;
 }
@@ -143,12 +152,14 @@ header h1 {
 	color: #fafafa;
 	font-weight: normal;
 	letter-spacing: 2.5px;
-	font-size: 30px;
+	font-size: 26px;
+	margin-top: 60px;
 }
 
 .lead {
 	padding-top: 20px;
-	padding-bottom: 20px;
+	font-size: 16px;
+	text-align: center;
 }
 
 /*................ABOUT THE COMPANY..............................................*/
@@ -157,7 +168,7 @@ header h1 {
 }
 
 #knowledge_icon {
-	width: 65px;
+	width: 53px;
 	padding-bottom: 2px;
 }
 
@@ -167,7 +178,7 @@ header h1 {
 }
 
 @media (min-width: 992px) {
-	.service-box {
+	.service-box { 
 		margin: 20px auto 0
 	}
 }
@@ -177,7 +188,7 @@ header h1 {
 }
 
 .service-box h3 {
-	margin-top: 20px;
+	margin-top: 18px;
 }
 
 .fa-globe {
@@ -514,17 +525,6 @@ img::-moz-selection {
 
 
 /*MODAL BUTTON*/
-.btn-default {
-	font-family: 'Open Sans', sans-serif !important;
-	color: #141414 !important;
-	cursor: pointer;
-	font-size: 12px;
-	margin: 15px;
-}
-
-.btn-default:hover {
-	background-color: #d5d5d5;
-}
 
 @media only screen and (max-width: 992px) {
 
@@ -571,7 +571,6 @@ img::-moz-selection {
 }
 
 /*.........................PARTNERS.............................*/
-
 .wrapper {
 	width: 100%;
 	text-align: center;
@@ -661,7 +660,7 @@ img::-moz-selection {
 	background-color: #dfdce3;
 }
 
-#form-div {
+.contact-form {
 	background-color: rgba(72,72,72,0.4);
 	padding-left: 30px;
 	padding-right: 30px;
@@ -678,7 +677,7 @@ img::-moz-selection {
 	-webkit-border-radius: 4px;
 }
 
-.input {
+#name, #email, #message, #subject {
 	color: #2d3031;
 	font-family: Helvetica, Arial, sans-serif;
 	font-weight: normal;
@@ -711,7 +710,7 @@ img::-moz-selection {
 
 textarea {
 	width: 100%;
-	height: 120px;
+	height: 150px;
 	line-height: 150%;
 	resize:vertical;
 }
@@ -721,17 +720,18 @@ input:focus, textarea:focus {
 	background-color: #fafafa;
 }
 
-#button-orange {
+.button-form {
 	font-family: 'Open Sans', sans-serif;
 	float:left;
 	width: 100%;
-	border: #fbfbfb solid 1px;
+	border: #fc4a1a solid 1px;
 	cursor: pointer;
 	background-color: #fc4a1a;
 	color: #fafafa;
-	font-size: 16px;
+	font-size: 14px;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	margin-bottom: 20px;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
@@ -764,26 +764,27 @@ input:focus, textarea:focus {
 
 /*....................CONTACT INFORMATION.................................*/
 #kontakt {
-  background-color: #078898;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+	background-color: #f4f4f4;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
  
 #kontakt p {
 	color: #2d3031;
-	font-size: 13px;
-	text-align: center;
+	font-size: 12px;
 	font-weight: normal;
+	padding: 5px
 }
 
 #kontakt .kontakt {
-	padding-top: 100px;
+	padding-top: 20px;
 }
 
 /*Google maps*/
 #kontakt #kaart {
+	margin-top: 20px;
 	margin-bottom: 30px;
 }
 
@@ -792,8 +793,8 @@ input:focus, textarea:focus {
 }
 
 #map {
-	height: 300px;
-	width: 450px;
+	height: 250px;
+	width: 400px;
 	border-radius: 4px;
 }
 
@@ -817,21 +818,12 @@ footer p {
 /*MEDIA*/
 @media (min-width: 356px) {
   header {
-	padding: 200px 0 100px;
+	padding: 110px 0 100px;
   }
 }
 
 
 @media only screen and (max-width: 736px) {
-	#form-div{
-		left: 3%;
-		margin-right: 3%;
-		width: 95%;
-		margin-left: 0;
-		padding-left: 3%;
-		padding-right: 3%;
-	}
-
 	#map {
 		height: 200px;
 		width: 200px;
