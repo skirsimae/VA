@@ -631,57 +631,21 @@
 
 				<div class="row">
 					<div class="col-md-12">
+						<form class ="contact-form" method="post" action="/send_form_tootmisseadmed">
 
-<form name="contactform" method="post" action="send_form_email.php">
-<table width="450px">
-<tr>
- <td valign="top">
-  <label for="first_name">First Name *</label>
- </td>
- <td valign="top">
-  <input  type="text" name="first_name" maxlength="50" size="30">
- </td>
-</tr>
-<tr>
- <td valign="top"">
-  <label for="last_name">Last Name *</label>
- </td>
- <td valign="top">
-  <input  type="text" name="last_name" maxlength="50" size="30">
- </td>
-</tr>
-<tr>
- <td valign="top">
-  <label for="email">Email Address *</label>
- </td>
- <td valign="top">
-  <input  type="text" name="email" maxlength="80" size="30">
- </td>
-</tr>
-<tr>
- <td valign="top">
-  <label for="telephone">Telephone Number</label>
- </td>
- <td valign="top">
-  <input  type="text" name="telephone" maxlength="30" size="30">
- </td>
-</tr>
-<tr>
- <td valign="top">
-  <label for="comments">Comments *</label>
- </td>
- <td valign="top">
-  <textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
- </td>
-</tr>
-<tr>
- <td colspan="2" style="text-align:center">
-  <input type="submit" value="Submit"><a href="http://www.google.com"></a>
- </td>
-</tr>
-</table>
-</form>
+							<input id="name" type="text" name="name" placeholder="Nimi" required="Nimi puudu">
 
+							<input id="email" type="text" name="email" placeholder="Email" required="Email puudu">
+
+							<input id="subject" type="text" name="subject" placeholder="Teema" required="Teema puudu">
+
+							<textarea id="message" name="message" placeholder="Teie sõnum" required="Sõnum puudu"></textarea>
+
+							<button class="button-form" type="submit">
+							<span class="glyphicon glyphicon-send" ></span>Saada
+							</button>
+
+						</form>
 					</div>
 				</div>
 			</div>
@@ -767,16 +731,38 @@
 		<!-- Customers logo carousel extra js -->
 		<script src="/js/customers.js"></script>
 
+		<!-- jQuery -->		
+		<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
 		<!-- Slick logo carousel js-->
 		<script src="/js/slick.js"></script>
 
 		<!-- AJAX -->
-<!-- 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
-<!-- 		<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-		<script src="validator.js"></script>
-		<script src="contact.js"></script>
- -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<script>
+			$(function(){
+			var fullUrl =  location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '');
+			$(".button-form").click(function(){      
+			  var formData = $(".contact-form").serialize();
+			  $("#msg").text("Email sending Please wait..");
+			            $.ajax({
+			              url: fullUrl+'/send',
+			                type: 'POST',
+			                  data: formData,
+			                        success: function(result) {
+			                             $("#msg").empty().text(result);
+			                              },
+			                        error: function(e) {
+			                             $("#msg").empty().text("There is some error to send email, Error code:"+e.status +", Error message:"+e.statusText);
+			                   },
+			            dataType: "html",
+			            timeout: 60000
+			        });
+				});
+			});
+
+		</script>
 	</body>
 
 </html>

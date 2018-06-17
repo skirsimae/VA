@@ -31,32 +31,43 @@ var express = require('express'),
 		res.render('raamatupidamine');
 	});
 	
-	app.post('/send-email', function (req, res) {
+	app.post('/send_form_tootmisseadmed', function (req, res) {
 		let transporter = nodeMailer.createTransport({
 			host: 'smtp.gmail.com',
 			port: 465,
 			secure: true,
 			auth: {
-				user: 'silvakirsimae@gmail.com',
-				pass: '3SA6jA6P'
+				user: 'xxxxx',
+				pass: 'xxxxx'
 			}
 		});
+
 		let mailOptions = {
-			to: '"Silva" <silvakirsimae@gmail.com>', // sender address
-			from: req.body.from, // list of receivers
-			subject: req.body.subject, // Subject line
-			text: req.body.body, // plain text body
-			html: '<b>NodeJS Email Tutorial</b>' // html body
+			from: '"' + req.body.name + '" <' + req.body.email + '>',
+			to: 'silvakirsimae@gmail.com', 
+			subject: 'Toomisseadmete päring' , 
+			text: ' Päringu teema: ' + req.body.subject + '\n Päringu saatis: ' + req.body.email + '\n Sõnum: \n\n' + req.body.message,
 		};
 
 		transporter.sendMail(mailOptions, (error, info) => {
 			if (error) {
-				return console.log(error);
+				res.send('Midagi läks valesti, palun  proovige uuesti');
+			} else {
+				res.send('Sõnum saadetud, vastame teile peagi');
 			}
-			console.log('Message %s sent: %s', info.messageId, info.response);
-				res.render('index');
-			});
 		});
-			app.listen(port, function(){
-				console.log('Server is running at port: ',port);
-			});
+	});
+
+
+
+	app.listen(port, function() {
+		console.log('Server is running at port: ',port);
+	});
+	
+
+
+
+
+
+
+
