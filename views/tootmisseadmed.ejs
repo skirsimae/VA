@@ -27,8 +27,11 @@
 		<!-- Client logo carousel css -->
 		<link rel="stylesheet" type="text/css" href="/css/carousel.css" rel="stylesheet">
 
-		<!-- Main css for this page-->
+		<!-- Main css for this page -->
 		<link href="/css/tootmisseadmed.css" rel="stylesheet">
+
+		<!-- AJAX form message -->
+		<!-- <link rel="stylesheet" href="/css/style.css"> -->
 <!-- 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" > -->
 	</head>
@@ -631,7 +634,7 @@
 
 				<div class="row">
 					<div class="col-md-12">
-						<form class ="contact-form" method="post" action="/send_form_tootmisseadmed">
+						<form id="emailForm" class ="contact-form" role="form" method="post" action="/send_form_tootmisseadmed">
 
 							<input id="name" type="text" name="name" placeholder="Nimi" required="Nimi puudu">
 
@@ -641,10 +644,9 @@
 
 							<textarea id="message" name="message" placeholder="Teie sõnum" required="Sõnum puudu"></textarea>
 
-							<button class="button-form" type="submit">
-							<span class="glyphicon glyphicon-send" ></span>Saada
+							<button id="send" class="button-form" type="button">Saada
 							</button>
-
+							<p class="form-message" id="msg"></p>
 						</form>
 					</div>
 				</div>
@@ -712,7 +714,7 @@
 
 		<!-- Bootstrap core JavaScript -->
 		<script src="/vendor/jquery/jquery.min.js"></script>
-		<script src="/vendor/popper/popper.min.js"></script>
+		<script src="/vendor/popper/popper.js"></script>
 		<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
 
 		<!-- Plugin JavaScript -->
@@ -731,38 +733,66 @@
 		<!-- Customers logo carousel extra js -->
 		<script src="/js/customers.js"></script>
 
+		<!-- AJAX -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 		<!-- jQuery -->		
 		<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 		<!-- Slick logo carousel js-->
 		<script src="/js/slick.js"></script>
 
-		<!-- AJAX -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="../server.js"></script>
+
+
 
 		<script>
-			$(function(){
-			var fullUrl =  location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '');
-			$(".button-form").click(function(){      
-			  var formData = $(".contact-form").serialize();
-			  $("#msg").text("Email sending Please wait..");
-			            $.ajax({
-			              url: fullUrl+'/send',
-			                type: 'POST',
-			                  data: formData,
-			                        success: function(result) {
-			                             $("#msg").empty().text(result);
-			                              },
-			                        error: function(e) {
-			                             $("#msg").empty().text("There is some error to send email, Error code:"+e.status +", Error message:"+e.statusText);
-			                   },
-			            dataType: "html",
-			            timeout: 60000
-			        });
+			
+			$(function() {
+				var fullUrl = location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '');
+				$('#send').click(function(){
+					var formData = $('#emailForm').serialize();
+					$("#msg").text("Email sending Please wait..");
+					$.ajax ({
+						url: fullUrl+'/send_form_tootmisseadmed',
+						type: 'POST',
+						data: formData,
+						success: function(result) {
+							$('#msg').empty().text(result);
+						},
+						error: function(e) {
+							$('#msg').empty().text('There is some error to send email, Error Code:'+e.status + ', Error Message:'+e.statusText);
+						},
+						dataType: 'html',
+						timeout: 60000
+					});
 				});
 			});
 
 		</script>
+
+
+
+<!-- 		<script>
+		$(document).ready(function() {
+			var name,email,subject,message;
+			$("#send").click(function() {   
+				name=$("name").val();
+				email=$("email").val();   
+				subject=$("#subject").val();
+				message=$("#message").val();
+				$("#form_message").text("Sending E-mail...Please wait");
+				$.get("http://localhost:8000/send_form_tootmisseadmed",{name:name,email:email,subject:subject,message:message},function(data){
+					if(data == "sent") {
+						$("#form_message").empty().html("Email is been sent. Please check inbox!");
+					}
+				});
+			});
+		});
+		</script> -->
+
 	</body>
 
 </html>

@@ -1,6 +1,7 @@
 var express = require('express'),
+	http = require('http'),
 	path = require('path'),
-	nodeMailer = require('nodemailer'),
+	nodemailer = require('nodemailer'),
 	bodyParser = require('body-parser');
 
 	var app = express();
@@ -8,57 +9,78 @@ var express = require('express'),
 	app.use(express.static('public'));
 	app.use(bodyParser.urlencoded({extended: true}));
 	app.use(bodyParser.json());
-	var port = 3000;
+	var port = Number(process.env.PORT || 5000);
 
 
-	app.get('/', function (req, res) {
+	app.get('/', (req, res) => {
 		res.render('index_estonian');
 	});
 
-	app.get('/en', function (req, res) {
+	app.get('/en', (req, res) =>{
 		res.render('index_english');
 	});
 
-	app.get('/tootmisseadmed', function (req,res) {
+	app.get('/tootmisseadmed', (req,res) => {
 		res.render('tootmisseadmed');
+		console.log('Nodemailer reading console log...' + req.url);
 	});
 
-	app.get('/sales', function (req,res) {
+	app.get('/sales', (req,res) => {
 		res.render('sales');
 	});
 
-	app.get('/raamatupidamine', function (req,res) {
+	app.get('/raamatupidamine', (req,res) => {
 		res.render('raamatupidamine');
 	});
 	
-	app.post('/send_form_tootmisseadmed', function (req, res) {
-		let transporter = nodeMailer.createTransport({
+	app.post('/send_form_tootmisseadmed', (req, res) => {
+		if(req.body.name == "" || req.body.email == "" || req.body.message == "") {
+			res.send("Error: Nimi, Email voi Sonum puudu");
+			return false;
+		}
+		const output = `
+			<p>You have a new contact request</p>
+			<h3>Contact Details</h3>
+			<ul>  
+				<li>Name: ${req.body.name}</li>
+				<li>Email: ${req.body.email}</li>
+			</ul>
+			<h3>Teema</h3>
+			<p>${req.body.subject}</p>
+			<h3>Message</h3>
+			<p>${req.body.message}</p>
+		`;
+
+		let transporter = nodemailer.createTransport({
 			host: 'smtp.gmail.com',
-			port: 465,
-			secure: true,
+			port: 25,
+			secure: false,
 			auth: {
-				user: 'xxxxx',
-				pass: 'xxxxx'
+				user: 'silvakirsimae@gmail.com',
+				pass: '3SA6jA6P'
+			},
+			tls: {
+				rejectUnauthorized: false
 			}
 		});
 
 		let mailOptions = {
-			from: '"' + req.body.name + '" <' + req.body.email + '>',
+			from: '"Tootmisseadmete ankeet" <silvakirsimae@gmail.com>',
 			to: 'silvakirsimae@gmail.com', 
 			subject: 'Toomisseadmete päring' , 
-			text: ' Päringu teema: ' + req.body.subject + '\n Päringu saatis: ' + req.body.email + '\n Sõnum: \n\n' + req.body.message,
+			text: 'Hello World',
+			html: output
 		};
 
-		transporter.sendMail(mailOptions, (error, info) => {
+		transporter.sendMail(mailOptions, (error, response) => {
 			if (error) {
-				res.send('Midagi läks valesti, palun  proovige uuesti');
+				console.log(error);
+				res.send("Email could not sent due to error: "+error)
 			} else {
-				res.send('Sõnum saadetud, vastame teile peagi');
+				res.send("Email has been sent successfully");
 			}
 		});
 	});
-
-
 
 	app.listen(port, function() {
 		console.log('Server is running at port: ',port);
