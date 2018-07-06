@@ -57,8 +57,8 @@ var express = require('express'),
 			port: 25,
 			secure: false,
 			auth: {
-				user: 'silvakirsimae@gmail.com',
-				pass: '3SA6jA6P'
+				user: 'xxxxx',
+				pass: 'xxxxx'
 			},
 			tls: {
 				rejectUnauthorized: false
