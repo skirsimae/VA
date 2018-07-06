@@ -634,7 +634,7 @@
 
 				<div class="row">
 					<div class="col-md-12">
-						<form id="emailForm" class ="contact-form" role="form" method="post" action="/send_form_tootmisseadmed">
+						<form id="emailForm" class="contact-form" role="form" method="post" action="/send_form_tootmisseadmed">
 
 							<input id="name" type="text" name="name" placeholder="Nimi" required="Nimi puudu">
 
@@ -644,7 +644,7 @@
 
 							<textarea id="message" name="message" placeholder="Teie sõnum" required="Sõnum puudu"></textarea>
 
-							<button id="send" class="button-form" type="button">Saada
+							<button id="send" class="button-form" type="button" onclick="submitform()>Saada
 							</button>
 							<p class="form-message" id="msg"></p>
 						</form>
@@ -746,13 +746,10 @@
 
 		<script src="../server.js"></script>
 
-
-
 		<script>
-			
 			$(function() {
 				var fullUrl = location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '');
-				$('#send').click(function(){
+				$('#send').click(function() {
 					var formData = $('#emailForm').serialize();
 					$("#msg").text("Email sending Please wait..");
 					$.ajax ({
@@ -761,38 +758,17 @@
 						data: formData,
 						success: function(result) {
 							$('#msg').empty().text(result);
+							$('#emailForm').trigger('reset');
 						},
-						error: function(e) {
+						error: function(error) {
 							$('#msg').empty().text('There is some error to send email, Error Code:'+e.status + ', Error Message:'+e.statusText);
 						},
 						dataType: 'html',
-						timeout: 60000
+						timeout: 60000,
 					});
 				});
 			});
-
 		</script>
 
-
-
-<!-- 		<script>
-		$(document).ready(function() {
-			var name,email,subject,message;
-			$("#send").click(function() {   
-				name=$("name").val();
-				email=$("email").val();   
-				subject=$("#subject").val();
-				message=$("#message").val();
-				$("#form_message").text("Sending E-mail...Please wait");
-				$.get("http://localhost:8000/send_form_tootmisseadmed",{name:name,email:email,subject:subject,message:message},function(data){
-					if(data == "sent") {
-						$("#form_message").empty().html("Email is been sent. Please check inbox!");
-					}
-				});
-			});
-		});
-		</script> -->
-
 	</body>
-
 </html>

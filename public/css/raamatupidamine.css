@@ -25,9 +25,9 @@ h1, h2  {
 
 p, li, form {
 	font-family: 'Signika', sans-serif;
-	font-size: 17px;
+	font-size: 15px;
 	color: #090909;
-	line-height: 1.8;
+	line-height: 1.5;
 }
 
 section {
@@ -40,7 +40,7 @@ section h2 {
 
 section h3 {
 	color: #090909;
-	font-size: 20px;
+	font-size: 18px;
 	margin-bottom: 20px;
 }
 
@@ -186,7 +186,7 @@ button {
 	width: 100%;
 	border: #4d2c3d solid 1px;
 	cursor: pointer;
-	background-color: #4d2c3d;
+	background-color: #57652A;
 	color: #fafafa;
 	font-size: 14px;
 	padding-top: 10px;

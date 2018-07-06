@@ -32,7 +32,58 @@ var express = require('express'),
 	app.get('/raamatupidamine', (req,res) => {
 		res.render('raamatupidamine');
 	});
+
+	app.post('/send_form_raamatupidamine', (req, res) => {
+		const output = `
+			<p>You have a new contact request</p>
+			<h3>Contact Details</h3>
+			<p>name: ${req.body.name}</p>
+			<p>ettevotlusvorm: ${req.body.ettevotlusvorm}</p>
+			<p>email: ${req.body.email}</p>
+			<p>tegevusvaldkond: ${req.body.tegevusvaldkond}</p>
+			<p>töötajate arv: ${req.body.tootajate_arv}</p>
+			<p>käive aastas: ${req.body.kaive_aastas}</p>
+			<p>käibemaksu kohustuslane: ${req.body.käibemaksukohustuslane}</p>
+			<p>ladu: ${req.body.ladu}</p>
+			<p>kaardimakseterminal: ${req.body.kaardimakseterminal}</p>
+			<p>tegevus välisriigis: ${req.body.tegevus_valisriigis ? 'jah' : 'ei'}</p>
+			<p>tehingud valuutas: ${req.body.tehingud_valuutas ? 'jah' : 'ei'}</p>
+			<p>lisainfo: ${req.body.lisainfo}</p>
+			<p>algdokumentide arv: ${req.body.algdokumentide_arv}</p>
+		`
+
+		let transporter = nodemailer.createTransport({
+			host: 'smtp.gmail.com',
+			port: 25,
+			secure: false,
+			auth: {
+				user: 'silvakirsimae@gmail.com',
+				pass: '3SA6jA6P'
+			},
+			tls: {
+				rejectUnauthorized: false
+			}
+		});
+
+		let mailOptions = {
+			from: '"Raamatupidamise ankeet" <silvakirsimae@gmail.com>',
+			to: 'silvakirsimae@gmail.com', 
+			subject: 'Raamatupidamise päring', 
+			text: 'Hello World',
+			html: output
+		};
+
+		transporter.sendMail(mailOptions, (error, response) => {
+			if (error) {
+				console.log(error);
+				res.send("Email could not sent due to error: "+error);
+			} else {
+				res.send("Email has been sent successfully");
+			}
+		});
+	});
 	
+
 	app.post('/send_form_tootmisseadmed', (req, res) => {
 		if(req.body.name == "" || req.body.email == "" || req.body.message == "") {
 			res.send("Error: Nimi, Email voi Sonum puudu");
@@ -56,8 +107,8 @@ var express = require('express'),
 			port: 25,
 			secure: false,
 			auth: {
-				user: 'silvakirsimae@gmail.com',
-				pass: '3SA6jA6P'
+				user: 'xxxx',
+				pass: 'xxxx'
 			},
 			tls: {
 				rejectUnauthorized: false
@@ -75,7 +126,7 @@ var express = require('express'),
 		transporter.sendMail(mailOptions, (error, response) => {
 			if (error) {
 				console.log(error);
-				res.send("Email could not sent due to error: "+error)
+				res.send("Email could not sent due to error: "+error);
 			} else {
 				res.send("Email has been sent successfully");
 			}
