@@ -1,3 +1,4 @@
+require('dotenv').config();
 var express = require('express'),
 	http = require('http'),
 	path = require('path'),
@@ -57,8 +58,8 @@ var express = require('express'),
 			port: 25,
 			secure: false,
 			auth: {
-				user: 'xxxxx',
-				pass: 'xxxxx'
+				user: process.env.MYUSER,
+				pass: process.env.MYPASSWORD
 			},
 			tls: {
 				rejectUnauthorized: false
@@ -92,10 +93,8 @@ var express = require('express'),
 		const output = `
 			<p>You have a new contact request</p>
 			<h3>Contact Details</h3>
-			<ul>  
-				<li>Name: ${req.body.name}</li>
-				<li>Email: ${req.body.email}</li>
-			</ul>
+			<p>Name: ${req.body.name}</p>
+			<p>Email: ${req.body.email}</p>
 			<h3>Teema</h3>
 			<p>${req.body.subject}</p>
 			<h3>Message</h3>
@@ -107,8 +106,8 @@ var express = require('express'),
 			port: 25,
 			secure: false,
 			auth: {
-				user: 'xxxx',
-				pass: 'xxxx'
+				user: process.env.MYUSER,
+				pass: process.env.MYPASSWORD
 			},
 			tls: {
 				rejectUnauthorized: false
